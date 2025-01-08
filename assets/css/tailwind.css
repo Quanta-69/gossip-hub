@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* this file allows us to have extra classes */
+:root{
+    --spice:/* #e01f2d */#E23D28 ;
+}
+*{
+    transition: .3s ease;
+}
+body{
+    /* background: linear-gradient(to bottom, #ebf4f5, #b5c6e0) no-repeat;*/
+    min-height: 100vh;
+    background: #010B13;
+    /* background: url(../img/gossip.svg) center/contain fixed no-repeat; */
+    background: linear-gradient(to bottom, #3e3b92, #ae1b1e) no-repeat;
+    @apply text-white
+
+}
+.btn-wrap{
+    @apply flex items-center justify-center gap-4 flex-wrap
+}
+.wrapper{
+    min-height: 70vh;
+    @apply container flex items-center justify-center flex-col gap-8
+}
+
+@layer components{
+    .btn{
+        @apply bg-[var(--spice)] py-3 px-2 rounded-md text-white font-medium
+    }
+    .btn:hover{
+        @apply bg-[#ae1b1e]
+    }
+    .container{
+        @apply mx-auto my-2 
+    }
+
+}
+html::-webkit-scrollbar {
+    width: 6px; /* Width of the scrollbar */
+}
+html::-webkit-scrollbar-track {
+    background-color: #1a1a1a; /* Track color */
+}
+html::-webkit-scrollbar-thumb {
+    background-color: #444; /* Thumb color */
+    border-radius: 6px; /* Rounded corners */
+}
+html::-webkit-scrollbar-thumb:hover {
+    background-color: #666; /* Thumb color on hover */
+}
+/* Firefox scrollbar customization */
+html {
+    scrollbar-width: thin; /* Thin scrollbar */
+    scrollbar-color: #444 #1a1a1a; /* Thumb color and track color */
+}
